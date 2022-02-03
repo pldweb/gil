@@ -6,8 +6,9 @@
     font-family: 'Gilroy';
     src: url('Gilroy-bold.woff2') format('woff2'),
          url('Gilroy-bold.woff') format('woff');
-    font-weight: normal;
+   
     font-style: normal;
+    font-weight: 700;
 
 }
 
@@ -18,7 +19,7 @@
     font-family: 'Gilroy';
     src: url('Gilroy-heavy.woff2') format('woff2'),
          url('Gilroy-heavy.woff') format('woff');
-    font-weight: normal;
+    font-weight: 800;
     font-style: normal;
 
 }
@@ -30,7 +31,7 @@
     font-family: 'Gilroy';
     src: url('Gilroy-medium.woff2') format('woff2'),
          url('Gilroy-medium.woff') format('woff');
-    font-weight: normal;
+    font-weight: 500;
     font-style: normal;
 
 }
@@ -42,7 +43,7 @@
     font-family: 'Gilroy';
     src: url('Gilroy-regular.woff2') format('woff2'),
          url('Gilroy-regular.woff') format('woff');
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
 
 }
