@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Adwa Assalaf';
+  src: url('adwa-assalaf-regular') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 @font-face {	
 	font-family: 'Gilroy';	
 	src: url('Gilroy-Extrabold.eot');	
