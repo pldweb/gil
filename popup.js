@@ -1,4 +1,7 @@
 $(function() {
+     if (!window.location.pathname.includes("/blog")) {
+        return;
+    }
     const { imageUrl, targetUrl } = window.popupConfig;
 
     const modalHtml = `
