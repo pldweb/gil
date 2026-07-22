@@ -1,36 +1,42 @@
 $(function () {
 
-    // Tambahkan checkbox di bawah syarat & ketentuan
     $('.panel:has(a:contains("Syarat & Ketentuan")) .collapse-inner').append(`
         <div class="checkbox" style="margin-top:15px;">
             <label>
                 <input type="checkbox" id="setuju-syarat">
-                Saya menyetujui syarat dan ketentuan di atas.
+                <span style="color: red;">Saya menyetujui syarat dan ketentuan di atas </span>
             </label>
         </div>
     `);
 
-    // Restore status checkbox
-    if (localStorage.getItem('setuju_syarat') === '1') {
-        $('#setuju-syarat').prop('checked', true);
-    }
+    $('#btn-pesan-paket')
+        .css({
+            opacity: 0.6,
+            cursor: 'not-allowed'
+        });
 
-    // Simpan perubahan
     $(document).on('change', '#setuju-syarat', function () {
-        localStorage.setItem(
-            'setuju_syarat',
-            $(this).is(':checked') ? '1' : '0'
-        );
+
+        if ($(this).is(':checked')) {
+            $('#btn-pesan-paket').css({
+                opacity: '',
+                cursor: ''
+            });
+        } else {
+            $('#btn-pesan-paket').css({
+                opacity: 0.6,
+                cursor: 'not-allowed'
+            });
+        }
+
     });
 
-    // Cegah klik tombol jika belum setuju
     $(document).on('click', '#btn-pesan-paket', function (e) {
 
-        if (localStorage.getItem('setuju_syarat') !== '1') {
+        if (!$('#setuju-syarat').is(':checked')) {
             e.preventDefault();
-            e.stopImmediatePropagation();
 
-            alert('Persyaratan dan ketentuan belum dicentang. Harap centang terlebih dahulu.');
+            alert('Syarat & Ketentuan belum dicentang. Harap centang terlebih dahulu.');
 
             return false;
         }
