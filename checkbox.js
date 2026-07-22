@@ -30,7 +30,7 @@ $(function () {
             e.preventDefault();
             e.stopImmediatePropagation();
 
-            alert('Persyaratan peserta belum dicentang. Harap centang terlebih dahulu.');
+            alert('Persyaratan dan ketentuan belum dicentang. Harap centang terlebih dahulu.');
 
             return false;
         }
