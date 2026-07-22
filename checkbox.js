@@ -2,6 +2,8 @@ $(function () {
 
     let $panel = $('.panel:has(a:contains("Syarat & Ketentuan"))');
 
+    console.log($panel);
+
     if ($panel.length > 0) {
 
         $panel.find('.collapse-inner').append(`
