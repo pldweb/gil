@@ -1,24 +1,32 @@
 $(function () {
 
-    $('.panel:has(a:contains("Syarat & Ketentuan")) .collapse-inner').append(`
-        <div class="checkbox" style="margin-top:15px;">
-            <label>
-                <input type="checkbox" id="setuju-syarat">
-                <span style="color: red;">Saya menyetujui syarat dan ketentuan di atas </span>
-            </label>
-        </div>
-    `);
+    let $panel = $('.panel:has(a:contains("Syarat & Ketentuan"))');
 
-    $(document).on('click', '#btn-pesan-paket', function (e) {
+    if ($panel.length > 0) {
 
-        if (!$('#setuju-syarat').is(':checked')) {
-            e.preventDefault();
+        $panel.find('.collapse-inner').append(`
+            <div class="checkbox" style="margin-top:15px;">
+                <label>
+                    <input type="checkbox" id="setuju-syarat">
+                    <span style="color:red;">
+                        Saya menyetujui syarat dan ketentuan di atas
+                    </span>
+                </label>
+            </div>
+        `);
 
-            alert('Syarat & Ketentuan belum dicentang. Harap centang terlebih dahulu.');
+        $(document).on('click', '#btn-pesan-paket', function (e) {
 
-            return false;
-        }
+            if (!$('#setuju-syarat').is(':checked')) {
+                e.preventDefault();
 
-    });
+                alert('Syarat & Ketentuan belum dicentang. Harap centang terlebih dahulu.');
+
+                return false;
+            }
+
+        });
+
+    }
 
 });
