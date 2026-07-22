@@ -9,11 +9,6 @@ $(function () {
         </div>
     `);
 
-    $('#btn-pesan-paket')
-        .css({
-            opacity: 0.6,
-            cursor: 'not-allowed'
-        });
     $(document).on('click', '#btn-pesan-paket', function (e) {
 
         if (!$('#setuju-syarat').is(':checked')) {
