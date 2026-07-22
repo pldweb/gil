@@ -14,23 +14,6 @@ $(function () {
             opacity: 0.6,
             cursor: 'not-allowed'
         });
-
-    $(document).on('change', '#setuju-syarat', function () {
-
-        if ($(this).is(':checked')) {
-            $('#btn-pesan-paket').css({
-                opacity: '',
-                cursor: ''
-            });
-        } else {
-            $('#btn-pesan-paket').css({
-                opacity: 0.6,
-                cursor: 'not-allowed'
-            });
-        }
-
-    });
-
     $(document).on('click', '#btn-pesan-paket', function (e) {
 
         if (!$('#setuju-syarat').is(':checked')) {
