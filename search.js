@@ -27,18 +27,25 @@ $(function () {
     $newPane.append($poweredDiv);
     $tabContent.append($newPane);
 
-    var script = document.createElement('script');
-    script.src = '//cdn0.trainbusferry.com/tools/form/en/?id=12889710&domain=muslimtravel.12go.asia';
-    script.setAttribute('data-one2go', '12889710');
-    script.setAttribute('data-color', 'blue');
-    script.setAttribute('data-language', 'en');
-    script.setAttribute('data-adaptive', '1');
-    script.setAttribute('data-border', '1');
-    script.setAttribute('data-radius', '50');
-    script.setAttribute('data-origin-empty', 'true');
-    script.setAttribute('data-destination-empty', 'true');
-    script.setAttribute('data-logo', 'https://img.12go.asia/0/fit/1000/0/ce/0/plain/s3://12go-web-static/static/images/upload-media/7414.png');
-    script.setAttribute('data-domain', 'muslimtravel.12go.asia');
+    var widgetLoaded = false;
 
-    $newPane[0].insertBefore(script, $poweredDiv[0]);
+    $link.on('shown.bs.tab', function () {
+        if (widgetLoaded) return;
+        widgetLoaded = true;
+
+        var script = document.createElement('script');
+        script.src = '//cdn0.trainbusferry.com/tools/form/en/?id=12889710&domain=muslimtravel.12go.asia';
+        script.setAttribute('data-one2go', '12889710');
+        script.setAttribute('data-color', 'blue');
+        script.setAttribute('data-language', 'en');
+        script.setAttribute('data-adaptive', '1');
+        script.setAttribute('data-border', '1');
+        script.setAttribute('data-radius', '50');
+        script.setAttribute('data-origin-empty', 'true');
+        script.setAttribute('data-destination-empty', 'true');
+        script.setAttribute('data-logo', 'https://img.12go.asia/0/fit/1000/0/ce/0/plain/s3://12go-web-static/static/images/upload-media/7414.png');
+        script.setAttribute('data-domain', 'muslimtravel.12go.asia');
+
+        $newPane[0].insertBefore(script, $poweredDiv[0]);
+    });
 });
