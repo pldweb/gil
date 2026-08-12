@@ -20,7 +20,7 @@ $(function () {
 
     $tabList.append($newTab);
 
-    var $newPane = $('<div class="tab-pane" id="' + paneId + '"></div>');
+    var $newPane = $('<div class="tab-pane" id="' + paneId + '" style="min-width:900px;"></div>');
     var $poweredDiv = $(
         '<div id="powered">Powered by <a href="https://12go.asia/?z=12889710" target="_blank" rel="noopener noreferrer">12Go system</a></div>'
     );
@@ -38,7 +38,7 @@ $(function () {
         script.setAttribute('data-one2go', '12889710');
         script.setAttribute('data-color', 'blue');
         script.setAttribute('data-language', 'en');
-        script.setAttribute('data-adaptive', '1');
+        script.setAttribute('data-adaptive', '0');
         script.setAttribute('data-border', '1');
         script.setAttribute('data-radius', '50');
         script.setAttribute('data-origin-empty', 'true');
