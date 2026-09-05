@@ -4,6 +4,10 @@ $(document).ready(function () {
         return;
     }
 
+     if (!window.location.href.includes('/transaksi/paket-umrah')) {
+        return;
+    }
+
     $('<style>').text(`
         .arsy-cta{
             padding:30px 0;
@@ -160,5 +164,7 @@ $(document).ready(function () {
     `;
 
     $('.intro-paket-area').after(ctaHtml);
+
+    $('#inner-main-content > .page-outer').before(ctaHtml);
 
 });
