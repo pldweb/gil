@@ -1,10 +1,10 @@
 $(document).ready(function () {
 
-    if (!$('.intro-paket-area').length || $('.arsy-cta').length) {
+    if (!window.location.href.includes('/transaksi/paket-umrah')) {
         return;
     }
 
-     if (!window.location.href.includes('/transaksi/paket-umrah')) {
+    if (!$('.intro-paket-area').length || $('.arsy-cta').length) {
         return;
     }
 
