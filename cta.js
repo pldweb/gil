@@ -199,6 +199,9 @@ $(document).ready(function () {
         </section>
     `;
 
-    $('.intro-paket-area').after(ctaHtml);
-
+    if($('.intro-paket-area').length > 0) {
+        $('.intro-paket-area').after(ctaHtml);
+    } else {
+        $('#inner-main-content > #page-outer').before(ctaHtml);
+    }
 });
