@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    if (!window.location.href.includes('/transaksi/paket-umrah')) {
+    if (!window.location.href.includes('/transaksi/paket-umrah') || !window.location.href.includes('/transaksi/paket-haji') ) {
         return;
     }
 
@@ -122,12 +122,19 @@ $(document).ready(function () {
         }
     `).appendTo('head');
 
+
+    if(window.location.href.includes('/transaksi/paket-umrah')) {
+        let title = "Umrah"
+    } else if(window.location.href.includes('/transaksi/paket-haji')){
+        let title = "Haji"
+    }
+
     var ctaHtml = `
         <section class="arsy-cta">
             <div class="arsy-container">
 
                 <div class="arsy-text">
-                    <h2>Temukan Paket Umrah Terbaik untuk Anda</h2>
+                    <h2>Temukan Paket ${title} Terbaik untuk Anda</h2>
                     <p>
                         Pilih jadwal keberangkatan yang sesuai, lalu konsultasikan kebutuhan
                         perjalanan ibadah Anda bersama tim <strong>Arsytour</strong>.
