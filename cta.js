@@ -163,12 +163,10 @@ $(document).ready(function () {
             <div class="arsy-container">
 
                 <div class="arsy-text">
-                    <h2>Temukan Paket ${jenisPaket} Terbaik untuk Anda</h2>
+                    <h2>Masih Ada yang Ingin Ditanyakan?</h2>
 
                     <p>
-                        Pilih jadwal keberangkatan yang sesuai, lalu konsultasikan kebutuhan
-                        perjalanan ibadah ${jenisPaket} Anda bersama tim
-                        <strong>${namaTravel}</strong>.
+                        <strong>Tim Arsytour</strong> siap membantu menjelaskan detail paket, pilihan kamar, jadwal keberangkatan, serta proses pendaftaran sesuai kebutuhan Anda.
                     </p>
                 </div>
 
