@@ -61,7 +61,7 @@ $(document).ready(function () {
             .arsy-text h2{
                 margin:0 0 10px;
                 color:#22377e;
-                font-size:36px;
+                font-size:27px;
                 font-weight:700;
                 line-height:1.25;
             }
