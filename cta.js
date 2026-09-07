@@ -203,5 +203,6 @@ $(document).ready(function () {
         $('.intro-paket-area').after(ctaHtml);
     } else {
         $('#inner-main-content > #page-outer').before(ctaHtml);
+        $('#inner-main-content > #page-outer').after(ctaHtml);
     }
 });
