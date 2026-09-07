@@ -28,7 +28,7 @@ $(document).ready(function () {
     // CEK AGAR TIDAK DOBEL
     // ==============================
 
-    if (!$('.intro-paket-area').length || $('.arsy-cta').length) {
+    if ($('.arsy-cta').length) {
         return;
     }
 
