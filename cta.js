@@ -175,10 +175,7 @@ $(document).ready(function () {
 
                 <div class="arsy-text">
                     <h2>${judul}</h2>
-
-                    <p>
-                        <strong>Tim Arsytour</strong> siap membantu menjelaskan detail paket, pilihan kamar, jadwal keberangkatan, serta proses pendaftaran sesuai kebutuhan Anda.
-                    </p>
+                    <p>${desc}</p>
                 </div>
 
                 <div class="arsy-action">
