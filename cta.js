@@ -158,18 +158,20 @@ $(document).ready(function () {
     // HTML DINAMIS
     // ==============================
 
-    let judul;
-    let desc;
+    // let judul;
+    // let desc;
 
-     if(!$('.intro-paket-area').length > 0) {
-        judul = `Temukan Paket ${slugPaket} Terbaik untuk Anda`;
-         desc = "Pilih jadwal keberangkatan yang sesuai, lalu konsultasikan kebutuhan perjalanan ibadah Anda bersama tim Arsytour";
-     } else {
-         judul = "Masih Ada yang Ingin Ditanyakan?";
-         desc = "<strong>Tim Arsytour</strong> siap membantu menjelaskan detail paket, pilihan kamar, jadwal keberangkatan, serta proses pendaftaran sesuai kebutuhan Anda.";
-     }
+    //  if(!$('.intro-paket-area').length > 0) {
+    //     judul = `Temukan Paket ${slugPaket} Terbaik untuk Anda`;
+    //      desc = "Pilih jadwal keberangkatan yang sesuai, lalu konsultasikan kebutuhan perjalanan ibadah Anda bersama tim <strong>Arsytour</strong>";
+    //  } else {
+    //      judul = "Masih Ada yang Ingin Ditanyakan?";
+    //      desc = "<strong>Tim Arsytour</strong> siap membantu menjelaskan detail paket, pilihan kamar, jadwal keberangkatan, serta proses pendaftaran sesuai kebutuhan Anda.";
+    //  }
 
-    var ctaHtml = `
+
+    function buatCta(judul, desc) {
+    return `
         <section class="arsy-cta">
             <div class="arsy-container">
 
@@ -206,11 +208,34 @@ $(document).ready(function () {
             </div>
         </section>
     `;
+}
 
-    if($('.intro-paket-area').length > 0) {
-        $('.intro-paket-area').after(ctaHtml);
-    } else {
-        $('#inner-main-content > #page-outer').before(ctaHtml);
-        $('#inner-main-content > #page-outer').after(ctaHtml);
-    }
-});
+if ($('.intro-paket-area').length > 0) {
+
+    // Kalau ada intro, hanya satu CTA setelah intro
+    $('.intro-paket-area').after(
+        buatCta(
+            "Masih Ada yang Ingin Ditanyakan?",
+            "<strong>Tim Arsytour</strong> siap membantu menjelaskan detail paket, pilihan kamar, jadwal keberangkatan, serta proses pendaftaran sesuai kebutuhan Anda."
+        )
+    );
+
+} else {
+
+    // CTA SEBELUM page-outer
+    $('#inner-main-content > #page-outer').before(
+        buatCta(
+            `Temukan Paket ${slugPaket} Terbaik untuk Anda`,
+            "Pilih jadwal keberangkatan yang sesuai, lalu konsultasikan kebutuhan perjalanan ibadah Anda bersama tim <strong>Arsytour</strong>."
+        )
+    );
+
+    // CTA SESUDAH page-outer
+    $('#inner-main-content > #page-outer').after(
+        buatCta(
+            "Masih bingung memilih paket?",
+            "<strong>Tim kami</strong> siap membantu memilih paket yang paling sesuai dengan anggaran, jadwal, dan kebutuhan perjalanan ibadah Anda."
+        )
+    );
+
+}
