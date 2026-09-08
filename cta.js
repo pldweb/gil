@@ -158,12 +158,23 @@ $(document).ready(function () {
     // HTML DINAMIS
     // ==============================
 
+    let judul;
+    let desc
+
+     if(!$('.intro-paket-area').length > 0) {
+        judul = `Temukan Paket ${slugpaket} Terbaik untuk Anda`;
+         desc = "Pilih jadwal keberangkatan yang sesuai, lalu konsultasikan kebutuhan perjalanan ibadah Anda bersama tim Arsytour";
+     } else {
+         judul = "Masih Ada yang Ingin Ditanyakan?";
+         desc = "<strong>Tim Arsytour</strong> siap membantu menjelaskan detail paket, pilihan kamar, jadwal keberangkatan, serta proses pendaftaran sesuai kebutuhan Anda."
+     }
+
     var ctaHtml = `
         <section class="arsy-cta">
             <div class="arsy-container">
 
                 <div class="arsy-text">
-                    <h2>Masih Ada yang Ingin Ditanyakan?</h2>
+                    <h2>${judul}</h2>
 
                     <p>
                         <strong>Tim Arsytour</strong> siap membantu menjelaskan detail paket, pilihan kamar, jadwal keberangkatan, serta proses pendaftaran sesuai kebutuhan Anda.
