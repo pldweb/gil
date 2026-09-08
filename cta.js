@@ -154,22 +154,6 @@ $(document).ready(function () {
 
     }
 
-    // ==============================
-    // HTML DINAMIS
-    // ==============================
-
-    // let judul;
-    // let desc;
-
-    //  if(!$('.intro-paket-area').length > 0) {
-    //     judul = `Temukan Paket ${slugPaket} Terbaik untuk Anda`;
-    //      desc = "Pilih jadwal keberangkatan yang sesuai, lalu konsultasikan kebutuhan perjalanan ibadah Anda bersama tim <strong>Arsytour</strong>";
-    //  } else {
-    //      judul = "Masih Ada yang Ingin Ditanyakan?";
-    //      desc = "<strong>Tim Arsytour</strong> siap membantu menjelaskan detail paket, pilihan kamar, jadwal keberangkatan, serta proses pendaftaran sesuai kebutuhan Anda.";
-    //  }
-
-
     function buatCta(judul, desc) {
     return `
         <section class="arsy-cta">
@@ -239,3 +223,6 @@ if ($('.intro-paket-area').length > 0) {
     );
 
 }
+
+
+});
